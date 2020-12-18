@@ -3,10 +3,9 @@ package edu.cs.birzeit.groupproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
 import edu.cs.birzeit.groupproject.model.Movie;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         //test comment
         setContentView(R.layout.activity_main);
 
-        RecyclerView recycler = (RecyclerView)findViewById(R.id.movies_recycle);
+        RecyclerView recycler = findViewById(R.id.movies_recycle);
 
         String[] captions = new String[Movie.list.length];
         int[] ids = new int[Movie.list.length];

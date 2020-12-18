@@ -1,0 +1,35 @@
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:lint'.
+> Lint found errors in the project; aborting build.
+  
+  Fix the issues identified by lint, or add the following to your build script to proceed with errors:
+  ...
+  android {
+      lintOptions {
+          abortOnError false
+      }
+  }
+  ...
+  
+  The first 3 errors (out of 4) were:
+  C:\AndroidProjects\GroupAssignment\app\build.gradle:29: Error: Version 28 (intended for Android Pie and below) is the last version of the legacy support library, so we recommend that you migrate to AndroidX libraries when using Android Q and moving forward. The IDE can help with this: Refactor > Migrate to AndroidX... [GradleCompatible]
+      implementation 'com.android.support:cardview-v7:26.0.0-alpha1'
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  C:\AndroidProjects\GroupAssignment\app\build.gradle:30: Error: Version 28 (intended for Android Pie and below) is the last version of the legacy support library, so we recommend that you migrate to AndroidX libraries when using Android Q and moving forward. The IDE can help with this: Refactor > Migrate to AndroidX... [GradleCompatible]
+      implementation 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  C:\AndroidProjects\GroupAssignment\app\build.gradle:32: Error: Version 28 (intended for Android Pie and below) is the last version of the legacy support library, so we recommend that you migrate to AndroidX libraries when using Android Q and moving forward. The IDE can help with this: Refactor > Migrate to AndroidX... [GradleCompatible]
+      implementation 'com.android.support:cardview-v7:28.0.0'
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 3m 47s

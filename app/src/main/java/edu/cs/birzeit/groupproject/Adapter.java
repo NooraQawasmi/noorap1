@@ -1,17 +1,15 @@
 package edu.cs.birzeit.groupproject;
 
 import android.graphics.drawable.Drawable;
-
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class Adapter
@@ -24,6 +22,7 @@ public class Adapter
         this.captions = captions;
         this.imageIds = imageIds;
     }
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         CardView v = (CardView) LayoutInflater.from(parent.getContext()).inflate(R.layout.card_image, parent, false);
@@ -34,12 +33,12 @@ public class Adapter
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         CardView cardView = holder.cardView;
-        ImageView imageView = (ImageView) cardView.findViewById(R.id.image);
+        ImageView imageView = cardView.findViewById(R.id.image);
         Drawable dr = ContextCompat.getDrawable(cardView.getContext(), imageIds[position]);
 
         imageView.setImageDrawable(dr);
 
-        TextView txt = (TextView)cardView.findViewById(R.id.txtName);
+        TextView txt = cardView.findViewById(R.id.txtName);
         txt.setText(captions[position]);
 
         cardView.setOnClickListener( new View.OnClickListener(){
