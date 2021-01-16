@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import edu.cs.birzeit.groupproject.model.Movie;
-
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     private Context context;
     private ArrayList<Movie> movies;

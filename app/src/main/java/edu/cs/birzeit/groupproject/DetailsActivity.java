@@ -3,6 +3,7 @@ package edu.cs.birzeit.groupproject;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -10,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import edu.cs.birzeit.groupproject.model.Movie;
-
 public class DetailsActivity extends AppCompatActivity {
     int index;
     private Movie movie = null;
@@ -47,6 +47,15 @@ public class DetailsActivity extends AppCompatActivity {
         year.setText(movie.getYear());
     }
 
+    public void finish(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
 
 
+
+    public void  AddToCart(View view) {
+        Intent intent = new Intent(this, fourthActivity.class);
+        startActivity(intent);
+    }
 }
