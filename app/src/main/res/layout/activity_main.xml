@@ -7,13 +7,14 @@ tools:context="edu.cs.birzeit.groupproject.MainActivity"
 android:layout_gravity="center"
     >
 
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/movies_recycle"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    android:foregroundGravity="center">
-</androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/course_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foregroundGravity="center"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="159dp"></androidx.recyclerview.widget.RecyclerView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

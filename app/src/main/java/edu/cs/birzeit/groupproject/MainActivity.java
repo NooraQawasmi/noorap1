@@ -11,11 +11,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import edu.cs.birzeit.groupproject.model.Movie;
+import edu.cs.birzeit.groupproject.model.Course;
 
 public class MainActivity extends AppCompatActivity {
     Adapter adapter;
-    public static ArrayList<Movie> movies;
+    public static ArrayList<Course> course;
     private RecyclerViewClickListener recyclerViewClickListener;
     public int indexClicked;
     @Override
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        RecyclerView recyclerView = findViewById(R.id.movies_recycle);
+        RecyclerView recyclerView = findViewById(R.id.course_recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new Adapter(this,movies,recyclerViewClickListener);
+        adapter = new Adapter(this,course,recyclerViewClickListener);
         recyclerView.setAdapter(adapter);
 
     }
@@ -50,28 +50,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadData(){
-        movies = new ArrayList<>();
+        course = new ArrayList<>();
 
-        movies.add(new Movie("FIFA2021", R.drawable.jumanji, "Sport",
-                "PS4 Football game by EASPORT","200Nis"));
+        course.add(new Course("Mobile Application Development", "COMP438",
+                "Computer Science","Faculty Of Engineering And Technology","Course to Learn Android","3" ,R.drawable.jumanji));
 
-        movies.add(new Movie("Valorant", R.drawable.lacasadepapel,"Action",
-                "Fight game","150nis"));
+        course.add(new Course("Computer Networks","ENCS3320","Computer Systems Engineering","Faculty Of Engineering And Technology","Understand Computer Network consipts","3" ,R.drawable.lacasadepapel));
 
-        movies.add(new Movie("Butterfield 2", R.drawable.parker, "Action",
-                "fight","100Nis"));
+        course.add(new Course("General Biology LAB","BIO111","Biology","Faculty of Science","Making Experience","1",R.drawable.parker));
 
-        movies.add(new Movie("GTAIV",R.drawable.exeter,"Drive",
-                "Drive and fight ","300Nis"));
+        course.add(new Course("Calculus","MATH1411","Mathematics","Faculty of Math","Review of Functions","4",R.drawable.exeter));
 
-        movies.add(new Movie("Men in black", R.drawable.mib,"Action"
-        ,"Shoot","70Nis"));
+       // course.add(new Course("Men in black", R.drawable.mib,"Action"
+        //,"Shoot","70Nis"));
 
-        movies.add(new Movie("Mario", R.drawable.mp,"Kids.",
-                "Kids game","70Nis"));
-
-        movies.add(new Movie("Need for speed", R.drawable.ridealong,"racing.",
-                "racing game ","322Nis"));
+        //course.add(new Course("Mario", R.drawable.mp,"Kids.",
+          //      "Kids game","70Nis"));
+//
+//        course.add(new Course("Need for speed", R.drawable.ridealong,"racing.",
+//                "racing game ","322Nis"));
 
 //        movies.add(new Movie("Sijjin 2 ", R.drawable.sijjin2,"Horror.",
 //                "A woman has had her little child squashed and killed after the jins have turned the cabinet over him as she found out that this was not a coincidence or a matter of death and life rather a malignant black magic has been hatched to hunt their family.","2015"));

@@ -1,5 +1,4 @@
 package edu.cs.birzeit.groupproject;
-
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
@@ -12,14 +11,15 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import edu.cs.birzeit.groupproject.model.Movie;
+import edu.cs.birzeit.groupproject.model.Course;
+
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     private Context context;
-    private ArrayList<Movie> movies;
+    private ArrayList<Course> course;
     private static RecyclerViewClickListener recyclerViewClickListener;
 
-    public Adapter(Context context, ArrayList<Movie> movies, RecyclerViewClickListener recyclerViewClickListener){
-        this.movies = movies;
+    public Adapter(Context context, ArrayList<Course> course, RecyclerViewClickListener recyclerViewClickListener){
+        this.course = course;
         this.context = context;
         Adapter.recyclerViewClickListener = recyclerViewClickListener;
     }
@@ -51,17 +51,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
         CardView cardView = holder.cardView;
         ImageView imageView = cardView.findViewById(R.id.image);
 
-        Drawable dr = ContextCompat.getDrawable(cardView.getContext(), movies.get(index).getImageId());
+        Drawable dr = ContextCompat.getDrawable(cardView.getContext(), course.get(index).getImageId());
         imageView.setImageDrawable(dr);
 
         TextView txt = cardView.findViewById(R.id.txtName);
-        txt.setText(movies.get(index).getTitle());
+        txt.setText(course.get(index).getName());
     }
 
     @Override
     public int getItemCount() {
-        return movies.size();
+        return course.size();
     }
-
 
 }
