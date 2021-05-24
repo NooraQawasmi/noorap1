@@ -8,9 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-
 import edu.cs.birzeit.groupproject.model.Course;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.course_recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         adapter = new Adapter(this,course,recyclerViewClickListener);
         recyclerView.setAdapter(adapter);
 
@@ -53,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
         course = new ArrayList<>();
 
         course.add(new Course("Mobile Application Development", "COMP438",
-                "Computer Science","Faculty Of Engineering And Technology","Course to Learn Android","3" ,R.drawable.jumanji));
+                "Computer Science","Faculty Of Engineering And Technology","Course to Learn Android","3" ,R.drawable.mobile1));
 
-        course.add(new Course("Computer Networks","ENCS3320","Computer Systems Engineering","Faculty Of Engineering And Technology","Understand Computer Network consipts","3" ,R.drawable.lacasadepapel));
+        course.add(new Course("Computer Networks","ENCS3320","Computer Systems Engineering","Faculty Of Engineering And Technology","Understand Computer Network consipts","3" ,R.drawable.network));
 
-        course.add(new Course("General Biology LAB","BIO111","Biology","Faculty of Science","Making Experience","1",R.drawable.parker));
+        course.add(new Course("General Biology LAB","BIO111","Biology","Faculty of Science","Making Experience","1",R.drawable.bio));
 
-        course.add(new Course("Calculus","MATH1411","Mathematics","Faculty of Math","Review of Functions","4",R.drawable.exeter));
+        course.add(new Course("Calculus","MATH1411","Mathematics","Faculty of Math","Review of Functions","4",R.drawable.math));
 
        // course.add(new Course("Men in black", R.drawable.mib,"Action"
         //,"Shoot","70Nis"));

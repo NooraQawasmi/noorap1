@@ -53,8 +53,4 @@ public class DetailsActivity extends AppCompatActivity {
         dep.setText(course.getDep());
     }
 
-    public void  AddToSchedule(View view) {
-        Intent intent = new Intent(this, fourthActivity.class);
-        startActivity(intent);
-    }
 }
